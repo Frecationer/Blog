@@ -8,7 +8,8 @@ body {
 /* Navbar */
 .navbar {
   background: linear-gradient(to right, #e8f8ff, #f8ffff);
-  border-bottom: 2px #d4e8f4;
+  border-bottom: 20px #000000;
+  box-shadow: 0 4px 0 rgba(21, 103, 255, 0.5);;
 }
 
 .navbar-brand {
@@ -25,7 +26,7 @@ body {
 }
 
 .nav-link.active {
-  color: #00bfa6 !important;
+  color: #000000 !important;
 }
 
 /* Page Title */
@@ -125,42 +126,9 @@ footer a:hover {
 /* Navbar Category Button with Gradient Border */
 .navbar .dropdown-toggle {
   border: 2px solid transparent;
-  border-image: linear-gradient(to right, #00bfa6, #6ce5d5) 1;
-  border-radius: 20px;
+  border-image: linear-gradient(to right, #000000, #000000) 1;
   padding: 6px 15px;
-  color: #00bfa6;
-  background-color: transparent;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.navbar .dropdown-toggle:hover {
-  background-color: #00bfa6;
-  color: #fff;
-}
-
-.dropdown-menu {
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-item {
-  padding: 10px 20px;
-}
-
-.dropdown-item:hover {
-  background-color: #00bfa6;
-  color: #fff;
-}
-
-/* Navbar Category Button with Gradient Border */
-.navbar .dropdown-toggle {
-  border: 2px solid transparent;
-  border-image: linear-gradient(to right, #00bfa6, #6ce5d5) 1;
-  border-radius: 20px;
-  padding: 6px 15px;
-  color: #00bfa6;
+  color: #000000;
   background-color: transparent;
   font-weight: 500;
   transition: all 0.3s ease;
