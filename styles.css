@@ -1,0 +1,193 @@
+/* Global Style */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #e8f8ff, #f8ffff);
+  border-bottom: 2px #d4e8f4;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-brand span {
+  color: #00bfa6;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: #00bfa6 !important;
+}
+
+/* Page Title */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+.input-group .form-control {
+  border-radius: 20px 0 0 20px;
+}
+
+.input-group .btn {
+  border-radius: 0 20px 20px 0;
+  background-color: #00bfa6;
+  color: #fff;
+}
+
+/* Categories Buttons */
+button.btn-outline-success {
+  border-color: #00bfa6;
+  color: #00bfa6;
+}
+
+button.btn-outline-success:hover {
+  background-color: #00bfa6;
+  color: #fff;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Pagination */
+.pagination .page-link {
+  color: #00bfa6;
+  border: none;
+}
+
+.pagination .page-link:hover {
+  background-color: #00bfa6;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: #212529;
+  color: #fff;
+}
+
+footer h5 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+footer a {
+  color: #00bfa6;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Blog Decoration */
+.blog-decoration {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  opacity: 0.2;
+}
+
+.blog-decoration img {
+  width: 200px;
+}
+/* Navbar Category Button with Gradient Border */
+.navbar .dropdown-toggle {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #00bfa6, #6ce5d5) 1;
+  border-radius: 20px;
+  padding: 6px 15px;
+  color: #00bfa6;
+  background-color: transparent;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar .dropdown-toggle:hover {
+  background-color: #00bfa6;
+  color: #fff;
+}
+
+.dropdown-menu {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+  background-color: #00bfa6;
+  color: #fff;
+}
+
+/* Navbar Category Button with Gradient Border */
+.navbar .dropdown-toggle {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #00bfa6, #6ce5d5) 1;
+  border-radius: 20px;
+  padding: 6px 15px;
+  color: #00bfa6;
+  background-color: transparent;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar .dropdown-toggle:hover {
+  background-color: #00bfa6;
+  color: #fff;
+}
+
+.dropdown-menu {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+  background-color: #00bfa6;
+  color: #fff;
+}
+
+.img {
+  width: 50px; /* Sesuaikan lebar */
+  height: auto; /* Pertahankan aspek rasio */
+  margin-right: 10px; /* Beri jarak antara logo dan teks (opsional) */
+}
