@@ -1,0 +1,233 @@
+/* Global Style */
+* {
+ box-sizing: border-box;
+}
+
+body {
+ font-family: "poppins", sans-serif;
+ background-color: #f8f9fa;
+ color: #333;
+ height: 100%;
+ overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+ background: white;
+ border-bottom: 20px #000000;
+}
+
+.navbar-gradient-shadow{
+ position: relative;
+}
+
+.navbar-gradient-shadow::before{
+ content: '';
+ position: absolute;
+ top: 100%;
+ left: 0;
+ width: 100%;
+ height: 5px;
+ background: linear-gradient(to right, #1C42FD, #00B4BA);
+ z-index: -1;
+}
+
+.navbar-brand {
+ font-size: 1.5rem;
+ font-weight: bold;
+}
+
+.navbar-brand span {
+ color: #00bfa6;
+}
+
+.nav-link {
+ font-weight: 500;
+}
+
+.nav-link.active {
+ color: #000000 !important;
+}
+
+/* Logo Navbar */
+.image {
+ width: 50px;
+ height: auto;
+ margin-right: 10px;
+}
+
+/* Gambar Hiasan */
+.corner-image {
+ position: absolute;
+ margin-top: 10px;
+ right: 0;
+ width: 450px;
+ transform: scaleY(-1) scaleX(-1);
+ z-index: 1;
+}
+
+/* Navbar Category Button with Gradient Border */
+.navbar .dropdown-toggle {
+ border: 2px solid transparent;
+ border-image: linear-gradient(to right, #00B4BA, #60EFB8) 1;
+ padding: 6px 15px;
+ color: #000000;
+ background-color: transparent;
+ font-weight: 500;
+ transition: all 0.3s ease;
+}
+
+.navbar .dropdown-toggle:hover {
+ background-image: linear-gradient(to right, #00B4BA, #006F76);
+ color: #fff;
+}
+
+.dropdown-menu {
+ border-radius: 10px;
+ border: none;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+ padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+ background-color: #00bfa6;
+ color: #fff;
+}
+
+/* Page Title */
+h1 {
+ font-size: 3rem;
+ font-weight: bold;
+ margin-top: 30px;
+}
+
+/* Search Bar */
+.input-group .btn {
+ background: linear-gradient(to right, #00B4BA, #60EFB8);
+ border: none;
+ color: #fff;
+}
+
+label {
+ font-weight: bold;
+ margin-bottom: 10px;
+ display: block;
+}
+
+/* Categories Buttons */
+a.btn-outline-success {
+ background: linear-gradient(to right, #00B4BA, #60EFB8);
+ border: none;
+ color: #ffffff;
+}
+
+a.btn-outline-success:hover {
+ background-color: #00bfa6;
+ color: #fff;
+}
+
+.form-select {
+ padding: 10px;
+ font-size: 16px;
+ border: 2px solid;
+ cursor: pointer;
+ border-image: linear-gradient(45deg, #1C42FD, #00B4BA) 1;
+ transition: all 0.4s ease-in-out; /* Smooth transition for all properties */
+}
+
+/* Efek halus saat hover */
+.form-select:hover {
+ box-shadow: 0 0 8px rgba(28, 66, 253, 0.3); /* Shadow biru lebih halus */
+ transform: scale(1.02); /* Zoom-in lebih halus */
+}
+
+/* Efek halus saat focus */
+.form-select:focus {
+ outline: none;
+ border-image: linear-gradient(45deg, #00B4BA, #1C42FD) 1; /* Gradien dibalik dengan halus */
+ box-shadow: 0 0 8px rgba(0, 180, 186, 0.3); /* Shadow gradient halus */
+ transform: scale(1.03); /* Zoom-in lebih halus saat fokus */
+}
+
+/* Efek halus pada pilihan saat select terbuka */
+.form-select:active {
+ transform: scale(1); /* Animasi balik ke ukuran normal */
+}
+
+.form-select:focus {
+ outline: none;
+}
+
+/* Cards */
+.card {
+ border: none;
+ border-radius: 15px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ overflow: hidden;
+}
+
+.card-title {
+ margin-top: 20px;
+ font-size: 1.2rem;
+ font-weight: bold;
+}
+
+.card img {
+ height: 300px;
+ object-fit: cover;
+}
+
+.card-body p {
+ font-size: 0.9rem;
+ color: #666;
+}
+
+.gradient-line {
+ height: 3px; /* Ketebalan garis */
+ background: linear-gradient(to right, #1C42FD, #3CE9E7); /* Warna gradient */
+ border: none;
+ margin-top: 10px; /* Jarak dari elemen sebelumnya */
+}
+
+/* Pagination */
+.pagination .page-link {
+ color: #00bfa6;
+ border: none;
+}
+
+.pagination .page-link:hover {
+ background-color: #00bfa6;
+ color: #fff;
+}
+
+
+/* Footer */
+footer {
+ background: #212529;
+ color: #fff;
+ width: 100vw;
+ position: relative;
+ margin-right: 120%;
+}
+
+footer h5 {
+ font-size: 1rem;
+ font-weight: bold;
+}
+
+footer p {
+ font-size: 0.9rem;
+ margin: fixed;
+}
+
+footer a {
+ color: #00bfa6;
+ text-decoration: none;
+}
+
+footer a:hover {
+ text-decoration: underline;
+}
