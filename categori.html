@@ -3,19 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sub Blog Page</title>
+    <title>Category</title>
     <!-- Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/category.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom navbar-gradient-shadow">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom navbar-gradient-shadow animate__animated animate__fadeInDown">
       <div class="container">
-          <img class="image" src="image/F.png" href="#" alt="">
+        <img class="image animate__animated animate__fadeInLeft" src="image/F.png" href="#" alt="">
         <a class="navbar-brand fw-bold" href="#">FRECATIONER</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -23,13 +20,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Blog</a>
+              <a class="nav-link active animate__animated animate__fadeInRight" href="index.html">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Contact</a>
+              <a class="nav-link active animate__animated animate__fadeInRight" href="#">Contact</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle animate__animated animate__fadeInRight" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                 Category
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -43,150 +40,74 @@
       </div>
     </nav>
 
-        <!-- Gambar -->
+    <!-- Gambar -->
     <div class="container">
-      <img src="image/gambar-hiasan.png" class="corner-image">
+      <img src="image/gambar-hiasan.png" class="corner-image animate__animated animate__zoomIn">
     </div>
 
     <!-- Main Content -->
-    <div class="container mt-4 py-5">
+    <div class="container mt-4 py-5 animate__animated animate__fadeInUp">
       <h1 class="text-center mb-4">KATEGORI : HIBURAN</h1>
 
       <!-- Search & Dropdown -->
       <div class="row justify-content-center mb-4">
         <div class="col-md-6">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Cari Judul">
-            <button class="btn btn-success">Search</button>
+            <input type="text" class="form-control animate__animated animate__fadeIn" placeholder="Cari Judul">
+            <button class="btn btn-success animate__animated animate__fadeIn">Search</button>
           </div>
         </div>
       </div>
-        <div class="row justify-content-center mb-10">
-            <div class="col-md-11">
-              <div class="input-group">
-                <div class="container">
-                    <label for="categorySelect">Pilih Kategori Lainnya:</label>
-                </div>
-                <select class="form-select" aria-label="Disabled select example">
-                    <option selected>Select Category</option>
-                    <option value="1">Category 1</option>
-                    <option value="2">Category 2</option>
-                    <option value="3">Category 3</option>
-                </select>
-              </div>
+      
+      <!-- Dropdown -->
+      <div class="row justify-content-center mb-10">
+        <div class="col-md-11">
+          <div class="input-group">
+            <div class="container">
+              <label for="categorySelect">Pilih Kategori Lainnya:</label>
             </div>
+            <select class="form-select animate__animated animate__fadeIn" aria-label="Disabled select example">
+              <option selected>Select Category</option>
+              <option value="1">Category 1</option>
+              <option value="2">Category 2</option>
+              <option value="3">Category 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
       <!-- Blog Cards -->
       <div class="row mt-5">
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4 animate__animated animate__zoomIn">
           <div class="card">
             <img src="image/desain.jpeg" alt="" />
             <div class="card-body">
               <h5 class="card-title">UI/UX</h5>
-              <p class="card-text">UI dan UX adalah istilah yang sering digunakan dalam pengembangan produk digital, yaitu User Interface (UI) dan User Experience (UX). UI dan UX memiliki peran yang berbeda, tetapi keduanya penting untuk mengembangkan produk yang disukai pengguna.</p>
+              <p class="card-text">UI dan UX adalah istilah yang sering digunakan dalam pengembangan produk digital...</p>
               <a href="#" class="btn" style="color: #1C42FD;">Read More...</a>
               <div class="gradient-line"></div>
               <p class="text-muted small mt-3">20 November 2024</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4 animate__animated animate__zoomIn">
           <div class="card">
             <img src="image/backend.png" class="card-img-top" alt="" />
             <div class="card-body">
               <h5 class="card-title">Backend</h5>
-              <p class="card-text">Backend adalah data dan infrastruktur yang membuat aplikasi berfungsi. Backend menyimpan dan memproses data aplikasi untuk pengguna.  Backend merupakan bagian dari server yang tidak terlihat dan tidak dapat diakses oleh pengguna.</p>
+              <p class="card-text">Backend adalah data dan infrastruktur yang membuat aplikasi berfungsi...</p>
               <a href="#" class="btn" style="color: #1C42FD;">Read More...</a>
               <div class="gradient-line"></div>
               <p class="text-muted small mt-3">20 November 2024</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4 animate__animated animate__zoomIn">
           <div class="card">
             <img src="image/front_end.jpeg" class="card-img-top" alt="" />
             <div class="card-body">
               <h5 class="card-title">Front-end</h5>
-              <p class="card-text">Front end adalah antarmuka pengguna grafis (GUI) yang memungkinkan pengguna berinteraksi langsung dengan sebuah aplikasi atau website. Front end mencakup komponen-komponen seperti menu navigasi, gambar, tombol, grafik, dan elemen desain.</p>
-              <a href="#" class="btn" style="color: #1C42FD;">Read More...</a>
-              <div class="gradient-line"></div>
-              <p class="text-muted small mt-3">20 November 2024</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- next Card -->
-      <div class="row mt-5">
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="image/desain.jpeg" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">UI/UX</h5>
-              <p class="card-text">I dan UX adalah istilah yang sering digunakan dalam pengembangan produk digital, yaitu User Interface (UI) dan User Experience (UX). UI dan UX memiliki peran yang berbeda, tetapi keduanya penting untuk mengembangkan produk yang disukai pengguna.</p>
-              <a href="#" class="btn" style="color: #1C42FD;">Read More...</a>
-              <div class="gradient-line"></div>
-              <p class="text-muted small mt-3">20 November 2024</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="image/backend.png" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">Backend</h5>
-              <p class="card-text">Backend adalah data dan infrastruktur yang membuat aplikasi berfungsi. Backend menyimpan dan memproses data aplikasi untuk pengguna.  Backend merupakan bagian dari server yang tidak terlihat dan tidak dapat diakses oleh pengguna.</p>
-              <a href="#" class="btn" style="color: #1C42FD;">Read More...</a>
-              <div class="gradient-line"></div>
-              <p class="text-muted small mt-3">20 November 2024</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="image/front_end.jpeg" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">Front-end</h5>
-              <p class="card-text">Front end adalah antarmuka pengguna grafis (GUI) yang memungkinkan pengguna berinteraksi langsung dengan sebuah aplikasi atau website. Front end mencakup komponen-komponen seperti menu navigasi, gambar, tombol, grafik, dan elemen desain.</p>
-              <a href="#" class="btn" style="color: #1C42FD;">Read More...</a>
-              <div class="gradient-line"></div>
-              <p class="text-muted small mt-3">20 November 2024</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- next Card -->
-      <div class="row mt-5">
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="image/desain.jpeg" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">UI/UX</h5>
-              <p class="card-text">I dan UX adalah istilah yang sering digunakan dalam pengembangan produk digital, yaitu User Interface (UI) dan User Experience (UX). UI dan UX memiliki peran yang berbeda, tetapi keduanya penting untuk mengembangkan produk yang disukai pengguna.</p>
-              <a href="#" class="btn" style="color: #1C42FD;">Read More...</a>
-              <div class="gradient-line"></div>
-              <p class="text-muted small mt-3">20 November 2024</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="image/backend.png" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">Backend</h5>
-              <p class="card-text">Backend adalah data dan infrastruktur yang membuat aplikasi berfungsi. Backend menyimpan dan memproses data aplikasi untuk pengguna.  Backend merupakan bagian dari server yang tidak terlihat dan tidak dapat diakses oleh pengguna.</p>
-              <a href="#" class="btn" style="color: #1C42FD;">Read More...</a>
-              <div class="gradient-line"></div>
-              <p class="text-muted small mt-3">20 November 2024</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="image/front_end.jpeg" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">Front-end</h5>
-              <p class="card-text">Front end adalah antarmuka pengguna grafis (GUI) yang memungkinkan pengguna berinteraksi langsung dengan sebuah aplikasi atau website. Front end mencakup komponen-komponen seperti menu navigasi, gambar, tombol, grafik, dan elemen desain.</p>
+              <p class="card-text">Front end adalah antarmuka pengguna grafis (GUI)...</p>
               <a href="#" class="btn" style="color: #1C42FD;">Read More...</a>
               <div class="gradient-line"></div>
               <p class="text-muted small mt-3">20 November 2024</p>
@@ -197,7 +118,7 @@
 
       <!-- Pagination -->
       <nav aria-label="Page navigation" class="mt-4">
-        <ul class="pagination justify-content-center">
+        <ul class="pagination justify-content-center animate__animated animate__fadeIn">
           <li class="page-item"><a class="page-link" href="#">&#xab;</a></li>
           <li class="page-item"><a class="page-link" href="#">1</a></li>
           <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -208,7 +129,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer bg-dark text-white py-4">
+    <footer class="footer bg-dark text-white py-4 animate__animated animate__fadeInUp">
       <div class="container">
         <div class="row text-center">
           <div class="col-sm-12 col-md-3 mb-3">

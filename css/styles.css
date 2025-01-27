@@ -1,4 +1,6 @@
 /* Global Style */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
 body {
   font-family: "poppins", sans-serif;
   background-color: #f8f9fa;
@@ -10,6 +12,7 @@ body {
 .navbar {
   background: white;
   border-bottom: 20px #000000;
+  animation: fadeInDown 1s ease-in-out;
 }
 
 .navbar-gradient-shadow{
@@ -86,9 +89,14 @@ h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-top: 30px;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 /* Search Bar */
+.input-group {
+  animation: zoomIn 0.8s ease-in-out;
+}
+
 .input-group .btn {
   background: linear-gradient(to right, #00B4BA, #60EFB8);
   border: none;
@@ -100,6 +108,7 @@ a.btn-outline-success {
   background: linear-gradient(to right, #00B4BA, #60EFB8);
   border: none;
   color: #ffffff;
+  animation: bounceIn 1.2s ease;
 }
 
 a.btn-outline-success:hover {
@@ -114,6 +123,7 @@ a.btn-outline-success:hover {
   left: 0;
   z-index: -1;
   width: 450px;
+  animation: zoomIn 1.5s ease;
 }
 
 .content-section {
@@ -122,10 +132,19 @@ a.btn-outline-success:hover {
 
 /* Cards */
 .card {
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
   border: none;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-title {
@@ -137,12 +156,6 @@ a.btn-outline-success:hover {
 .card-body p {
   font-size: 0.9rem;
   color: #666;
-}
-
-.card {
-  width: 100%;
-  max-width: 350px;
-  margin: auto;
 }
 
 .card-body .img {
@@ -168,6 +181,7 @@ footer {
   background: #212529;
   color: #fff;
   width: 100%;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
 footer h5 {
@@ -199,4 +213,39 @@ footer a:hover {
 
 .blog-decoration img {
   width: 200px;
+  animation: zoomIn 2s ease;
 }
+
+
+/* ANIMASI */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes customZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) scaleY(-1) scaleX(-1); /* Zoom kecil tetap terbalik */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) scaleY(-1) scaleX(-1); /* Zoom normal, tetap terbalik */
+  }
+ }
+
+ @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+ }

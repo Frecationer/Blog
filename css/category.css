@@ -1,4 +1,6 @@
 /* Global Style */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
 * {
  box-sizing: border-box;
 }
@@ -15,6 +17,7 @@ body {
 .navbar {
  background: white;
  border-bottom: 20px #000000;
+ animation: fadeInDown 1s ease-in-out;
 }
 
 .navbar-gradient-shadow{
@@ -64,6 +67,7 @@ body {
  width: 450px;
  transform: scaleY(-1) scaleX(-1);
  z-index: 1;
+ animation: customZoomIn 1.5s ease-in-out;
 }
 
 /* Navbar Category Button with Gradient Border */
@@ -164,9 +168,15 @@ a.btn-outline-success:hover {
 /* Cards */
 .card {
  border: none;
- border-radius: 15px;
+ border-radius: 20px;
  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
  overflow: hidden;
+ transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-title {
@@ -186,7 +196,7 @@ a.btn-outline-success:hover {
 }
 
 .gradient-line {
- height: 3px; /* Ketebalan garis */
+ height: 4px; /* Ketebalan garis */
  background: linear-gradient(to right, #1C42FD, #3CE9E7); /* Warna gradient */
  border: none;
  margin-top: 10px; /* Jarak dari elemen sebelumnya */
@@ -210,7 +220,8 @@ footer {
  color: #fff;
  width: 100vw;
  position: relative;
- margin-right: 120%;
+ margin: 0;
+ padding: 2rem 0;
 }
 
 footer h5 {
@@ -230,4 +241,35 @@ footer a {
 
 footer a:hover {
  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+ 0% {
+   opacity: 0;
+ }
+ 100% {
+   opacity: 1;
+ }
+}
+
+@keyframes customZoomIn {
+ 0% {
+   opacity: 0;
+   transform: scale(0.9) scaleY(-1) scaleX(-1); /* Zoom kecil tetap terbalik */
+ }
+ 100% {
+   opacity: 1;
+   transform: scale(1) scaleY(-1) scaleX(-1); /* Zoom normal, tetap terbalik */
+ }
+}
+
+@keyframes fadeInUp {
+ 0% {
+   opacity: 0;
+   transform: translateY(20px);
+ }
+ 100% {
+   opacity: 1;
+   transform: translateY(0);
+ }
 }
