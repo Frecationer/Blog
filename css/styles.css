@@ -1,11 +1,16 @@
 /* Global Style */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "poppins", sans-serif;
   background-color: #f8f9fa;
   color: #333;
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -97,6 +102,12 @@ h1 {
   animation: zoomIn 0.8s ease-in-out;
 }
 
+input.form-control {
+  height: 50px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
 .input-group .btn {
   background: linear-gradient(to right, #00B4BA, #60EFB8);
   border: none;
@@ -105,24 +116,46 @@ h1 {
 
 /* Categories Buttons */
 a.btn-outline-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
   background: linear-gradient(to right, #00B4BA, #60EFB8);
   border: none;
+  line-height: 25px;
   color: #ffffff;
+  height: 40px;
+  width: 100px;
   animation: bounceIn 1.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-basis: calc(20% - 10px);
+  box-sizing: border-box;
 }
 
 a.btn-outline-success:hover {
   background-color: #00bfa6;
   color: #fff;
+  transform: scale(1.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* Membungkus tombol ke baris berikutnya */
+  justify-content: center; /* Mengatur tombol agar berada di tengah */
+  gap: 10px; /* Memberi jarak antar tombol */
 }
 
 /* Gambar */
 .corner-image {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: -1;
-  width: 450px;
   animation: zoomIn 1.5s ease;
 }
 
@@ -136,7 +169,7 @@ a.btn-outline-success:hover {
   max-width: 350px;
   margin: auto;
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -160,7 +193,7 @@ a.btn-outline-success:hover {
 
 .card-body .img {
   margin-bottom: 15px;
-  width: 100%; 
+  width: 100%;  
   height: 300px;
   object-fit: cover;
 }
