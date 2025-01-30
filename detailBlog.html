@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memahami Dasar-Dasar Desain UI/UX</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/detailBlog.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom navbar-gradient-shadow">
+    <div class="container">
+      <img class="image" src="image/F.png" alt="">
+      <a class="navbar-brand fw-bold" href="#">FRECATIONER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Category</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">UI/UX</a></li>
+              <li><a class="dropdown-item" href="#">Backend</a></li>
+              <li><a class="dropdown-item" href="#">Front-end</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Blog Content -->
+  <div class="container mt-5">
+    <h2 class="text-center">Memahami Dasar-Dasar Desain UI/UX untuk Pemula</h2>
+    <p class="text-center">Created by: Unknown</p>
+    <img src="image/uiux_illustration.jpg" class="img-fluid mx-auto d-block" alt="UI/UX Illustration">
+    <p class="mt-4">Dalam era digital saat ini, desain antarmuka pengguna (User Interface/UI) dan pengalaman pengguna (User Experience/UX) menjadi elemen penting dalam pengembangan produk digital...</p>
+  </div>
+  <!-- End Blog Content -->
+
+  <!-- Comments Section -->
+  <div class="container mt-4">
+    <h4>Comments:</h4>
+    <div class="comment-box">
+      <p><strong>Aldi</strong> - 22 Nov 2024</p>
+      <p>Isi komentar dan si pembaca</p>
+      <hr>
+    </div>
+    <div class="comment-box">
+      <p><strong>Aldi</strong> - 22 Nov 2024</p>
+      <p>Isi komentar dan si pembaca</p>
+      <hr>
+    </div>
+    <!-- Comment Form -->
+    <h4>Berikan Komentar</h4>
+    <form>
+      <div class="mb-3">
+        <label for="nama" class="form-label">Nama:</label>
+        <input type="text" class="form-control" id="nama" placeholder="Masukkan nama kamu">
+      </div>
+      <div class="mb-3">
+        <label for="komentar" class="form-label">Komentar:</label>
+        <textarea class="form-control" id="komentar" rows="3" placeholder="Isi komentar"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Publish</button>
+    </form>
+  </div>
+  <!-- End Comments Section -->
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p>Contact: <a href="mailto:freactioner.official@gmail.com" class="text-white">freactioner.official@gmail.com</a></p>
+      <p>Address: East Java - Indonesia</p>
+      <p>Follow Us</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
