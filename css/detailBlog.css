@@ -1,0 +1,91 @@
+/* Global Style */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+* {
+ box-sizing: border-box;
+}
+
+body {
+ font-family: "poppins", sans-serif;
+ background-color: #f8f9fa;
+ color: #333;
+ height: 100%;
+ overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+ background: white;
+ border-bottom: 20px #000000;
+ animation: fadeInDown 1s ease-in-out;
+}
+
+.navbar-gradient-shadow{
+ position: relative;
+}
+
+.navbar-gradient-shadow::before{
+ content: '';
+ position: absolute;
+ top: 100%;
+ left: 0;
+ width: 100%;
+ height: 5px;
+ background: linear-gradient(to right, #1C42FD, #00B4BA);
+ z-index: -1;
+}
+
+.navbar-brand {
+ font-size: 1.5rem;
+ font-weight: bold;
+}
+
+.navbar-brand span {
+ color: #00bfa6;
+}
+
+.nav-link {
+ font-weight: 500;
+}
+
+.nav-link.active {
+ color: #000000 !important;
+}
+
+/* Logo Navbar */
+.image {
+ width: 50px;
+ height: auto;
+ margin-right: 10px;
+}
+
+/* Navbar Category Button with Gradient Border */
+.navbar .dropdown-toggle {
+ border: 2px solid transparent;
+ border-image: linear-gradient(to right, #00B4BA, #60EFB8) 1;
+ padding: 6px 15px;
+ color: #000000;
+ background-color: transparent;
+ font-weight: 500;
+ transition: all 0.3s ease;
+}
+
+.navbar .dropdown-toggle:hover {
+ background-image: linear-gradient(to right, #00B4BA, #006F76);
+ color: #fff;
+}
+
+.dropdown-menu {
+ border-radius: 10px;
+ border: none;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+ padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+ background-color: #00bfa6;
+ color: #fff;
+}
