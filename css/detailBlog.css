@@ -14,76 +14,196 @@ body {
 }
 
 .navbar {
-    background: white;
-    border-bottom: 20px #000000;
-    animation: fadeInDown 1s ease-in-out;
-  }
-  
-  .navbar-gradient-shadow{
-    position: relative;
-  }
-  
-  .navbar-gradient-shadow::before{
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 5px; /* Adjust the height of the shadow */
-    background: linear-gradient(to right, #1C42FD, #00B4BA);
-    z-index: -1;
-  }
-  
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .navbar-brand span {
-    color: #00bfa6;
-  }
-  
-  .nav-link {
-    font-weight: 500;
-  }
-  
-  .nav-link.active {
-    color: #000000 !important;
-  }
-  
-  .image {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-  }
-  
-  /* Navbar Category Button with Gradient Border */
-  .navbar .dropdown-toggle {
-    border: 2px solid transparent;
-    border-image: linear-gradient(to right, #00B4BA, #60EFB8) 1;
-    padding: 6px 15px;
-    color: #000000;
-    background-color: transparent;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  }
-  
-  .navbar .dropdown-toggle:hover {
-    background-image: linear-gradient(to right, #00B4BA, #006F76);
-    color: #fff;
-  }
-  
-  .dropdown-menu {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dropdown-item {
-    padding: 10px 20px;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #00bfa6;
-    color: #fff;
-  }
+  background: white;
+  border-bottom: 20px #000000;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.navbar-gradient-shadow{
+  position: relative;
+}
+
+.navbar-gradient-shadow::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Adjust the height of the shadow */
+  background: linear-gradient(to right, #1C42FD, #00B4BA);
+  z-index: -1;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-brand span {
+  color: #00bfa6;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: #000000 !important;
+}
+
+.image {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Navbar Category Button with Gradient Border */
+.navbar .dropdown-toggle {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #00B4BA, #60EFB8) 1;
+  padding: 6px 15px;
+  color: #000000;
+  background-color: transparent;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar .dropdown-toggle:hover {
+  background-image: linear-gradient(to right, #00B4BA, #006F76);
+  color: #fff;
+}
+
+.dropdown-menu {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+  background-color: #00bfa6;
+  color: #fff;
+}
+
+/* Blog Content */
+.content-area {
+ width: 60%; /* Reduce width to leave space for ads */
+ margin: 0 auto;
+ padding: 20px;
+}
+
+.ad-space {
+ position: absolute;
+ top: 20%;
+ width: 200px;
+ height: 600px;
+}
+
+.ad-space .image {
+ width: 100%;
+ height: 100%;
+}
+
+.ad-between {
+ display: block;
+ width: auto;
+ max-width: 60%;
+ text-align: center;
+ padding: 10px;
+ margin: 20px auto;
+}
+
+.ad-between .image {
+ width: 100%;
+}
+
+.left-ad {
+ left: 20px;
+}
+
+.right-ad {
+ margin-top: 30%;
+ right: 20px;
+}
+
+@media (max-width: 1200px) {
+ .ad-space {
+     display: none;
+ }
+
+ .ad-between {
+     font-size: 1em;
+ }
+
+ .content-area {
+     width: 90%;
+     padding: 10px;
+ }
+}
+
+/* End Blog Content */
+
+/* Previous and Next */
+.navigation {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px;
+ background-color: #f8f8f8;
+}
+
+.previous, .next {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.previous span, .next span {
+ font-weight: bold;
+ font-size: 14px;
+ text-transform: uppercase;
+}
+
+.previous p, .next p {
+ font-size: 14px;
+ margin-top: 5px;
+}
+
+.separator {
+ width: 1px;
+ height: 40px;
+ background-color: black;
+}
+/* End Previous and Next */
+
+/* Footer */
+footer {
+ background: #212529;
+ color: #fff;
+ width: 100vw;
+ position: relative;
+ margin: 0;
+ padding: 2rem 0;
+}
+
+footer h5 {
+ font-size: 1rem;
+ font-weight: bold;
+}
+
+footer p {
+ font-size: 0.9rem;
+ margin: fixed;
+}
+
+footer a {
+ color: #00bfa6;
+ text-decoration: none;
+}
+
+footer a:hover {
+ text-decoration: underline;
+}
