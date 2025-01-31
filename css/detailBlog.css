@@ -149,34 +149,72 @@ body {
 /* Previous and Next */
 .navigation {
  display: flex;
- justify-content: space-between;
+ justify-content: center; /* Mengatur jarak antara previous dan next */
  align-items: center;
- padding: 20px;
- background-color: #f8f8f8;
+ padding: 20px 0;
+ position: relative; /* Untuk penempatan separator */
 }
 
 .previous, .next {
  display: flex;
- flex-direction: column;
  align-items: center;
+ flex-grow: 1;
+ justify-content: center;
+}
+
+.content-wrapper {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+}
+
+.content-wrapper img {
+ width: 50px;
+}
+
+.next .content-wrapper img {
+ margin-left: 8px; /* Jarak antara gambar dan teks di next */
+}
+
+.text-group {
+ display: flex;
+ flex-direction: column;
+}
+
+.next .text-group {
+ margin-left: 20px;
+ 
+}
+
+.text-group span, .text-group p {
+ margin: 0;
+ padding: 0;
 }
 
 .previous span, .next span {
  font-weight: bold;
- font-size: 14px;
+ font-size: 20px;
  text-transform: uppercase;
 }
 
 .previous p, .next p {
  font-size: 14px;
- margin-top: 5px;
+ margin-top: 0;
+}
+
+.flip {
+ transform: rotate(180deg);
 }
 
 .separator {
- width: 1px;
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ width: 3px;
  height: 40px;
  background-color: black;
 }
+
 /* End Previous and Next */
 
 /* Footer */
