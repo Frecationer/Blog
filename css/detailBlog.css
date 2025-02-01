@@ -149,10 +149,10 @@ body {
 /* Previous and Next */
 .navigation {
  display: flex;
- justify-content: center; /* Mengatur jarak antara previous dan next */
+ justify-content: center;
  align-items: center;
  padding: 20px 0;
- position: relative; /* Untuk penempatan separator */
+ position: relative;
 }
 
 .previous, .next {
@@ -163,9 +163,10 @@ body {
 }
 
 .content-wrapper {
+ cursor: pointer;
  display: flex;
  align-items: center;
- gap: 8px;
+ gap: 5px;
 }
 
 .content-wrapper img {
@@ -181,12 +182,19 @@ body {
  flex-direction: column;
 }
 
+.next {
+ text-align: right;
+}
+
 .next .text-group {
  margin-left: 20px;
- 
 }
 
 .text-group span, .text-group p {
+ max-width: 150px;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
  margin: 0;
  padding: 0;
 }
@@ -208,7 +216,7 @@ body {
 
 .separator {
  position: absolute;
- left: 50%;
+ left: calc(50% - 1.5px);
  transform: translateX(-50%);
  width: 3px;
  height: 40px;
@@ -216,22 +224,21 @@ body {
 }
 
 /* Tambahkan animasi hover untuk Previous dan Next */
-.previous:hover, .next:hover {
+.content-wrapper:hover {
   transform: scale(1.05); /* Efek zoom saat di-hover */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Animasi hover untuk gambar panah */
-.previous:hover img {
-  transform: translateX(-10px); /* Panah previous bergerak ke kiri */
+.previous .content-wrapper:hover img {
+  transform: translateX(-10px);
   transition: transform 0.3s ease;
 }
 
-.next:hover img {
+.next .content-wrapper:hover img {
   transform: translateX(10px) rotate(180deg);
   transition: transform 0.3s ease;
 }
-
 /* End Previous and Next */
 
 /* Subscribe */

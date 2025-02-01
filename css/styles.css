@@ -119,7 +119,6 @@ a.btn-outline-success {
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: center;
   background: linear-gradient(to right, #00B4BA, #60EFB8);
   border: none;
   line-height: 25px;
@@ -128,7 +127,7 @@ a.btn-outline-success {
   width: 100px;
   animation: bounceIn 1.2s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex-basis: calc(20% - 10px);
+  /* flex-basis: calc(20% - 10px); */
   box-sizing: border-box;
 }
 
@@ -141,9 +140,9 @@ a.btn-outline-success:hover {
 
 .button-container {
   display: flex;
-  flex-wrap: wrap; /* Membungkus tombol ke baris berikutnya */
-  justify-content: center; /* Mengatur tombol agar berada di tengah */
-  gap: 10px; /* Memberi jarak antar tombol */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Gambar */
@@ -262,23 +261,108 @@ footer a:hover {
 }
 
 @keyframes customZoomIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9) scaleY(-1) scaleX(-1); /* Zoom kecil tetap terbalik */
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) scaleY(-1) scaleX(-1); /* Zoom normal, tetap terbalik */
-  }
+0% {
+  opacity: 0;
+  transform: scale(0.9) scaleY(-1) scaleX(-1); /* Zoom kecil tetap terbalik */
  }
+100% {
+  opacity: 1;
+  transform: scale(1) scaleY(-1) scaleX(-1); /* Zoom normal, tetap terbalik */
+ }
+}
 
- @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes fadeInUp {
+0% {
+  opacity: 0;
+  transform: translateY(20px);
  }
+100% {
+  opacity: 1;
+  transform: translateY(0);
+ }
+}
+
+ /* Responsif untuk Tablet (Layar dengan lebar maksimal 768px) */
+@media (max-width: 768px) {
+h1 {
+  font-size: 2rem; /* Mengurangi ukuran font untuk judul */
+}
+
+.navbar-brand {
+  font-size: 1.3rem; /* Sesuaikan ukuran font brand pada navbar */
+}
+
+.card {
+  max-width: 300px; /* Kurangi ukuran maksimum card */
+}
+
+.button-container {
+  justify-content: center;
+}
+
+.btn-outline-success {
+  width: 45%; /* Setengah lebar pada layar lebih kecil */ 
+  margin-bottom: 10px;
+}
+
+a.btn-outline-success {
+  width: 100%;
+  flex-basis: 100%;
+}
+
+.content-section {
+  margin-top: 200px; /* Kurangi margin untuk menghemat ruang pada layar kecil */
+}
+
+.corner-image {
+  max-width: 300px; /* Sesuaikan ukuran gambar pojok */
+}
+
+footer h5, footer p {
+  font-size: 0.8rem; /* Kurangi ukuran font footer */
+}
+}
+
+/* Responsif untuk Ponsel (Layar dengan lebar maksimal 576px) */
+@media (max-width: 576px) {
+h1 {
+  font-size: 1.5rem; /* Lebih kecil lagi untuk ponsel */
+}
+
+.navbar-brand {
+  font-size: 1.2rem; /* Lebih kecil lagi pada brand navbar */
+}
+
+.input-group .btn {
+  font-size: 0.9rem; /* Kurangi ukuran font pada tombol */
+}
+
+.card {
+  max-width: 100%; /* Buat card memenuhi lebar layar */
+  margin: 10px; /* Tambah margin agar tidak terlalu menempel di tepi */
+}
+
+.btn-outline-success {
+  width: 100%; /* Tombol menjadi full-width pada layar ponsel */
+}
+
+.card-body p {
+  font-size: 0.8rem; /* Kurangi ukuran font dalam card */
+}
+
+.corner-image {
+  max-width: 250px; /* Ukuran lebih kecil untuk ponsel */
+}
+
+.button-container {
+  flex-direction: column; /* Buat tombol-tombol berbaris vertikal pada layar kecil */
+}
+
+footer h5, footer p {
+  font-size: 0.7rem; /* Lebih kecil lagi untuk footer */
+}
+
+.blog-decoration img {
+  width: 150px; /* Sesuaikan ukuran dekorasi blog */
+}
+}
