@@ -173,7 +173,7 @@ body {
 }
 
 .next .content-wrapper img {
- margin-left: 8px; /* Jarak antara gambar dan teks di next */
+ margin-left: 8px;
 }
 
 .text-group {
@@ -215,15 +215,163 @@ body {
  background-color: black;
 }
 
+/* Tambahkan animasi hover untuk Previous dan Next */
+.previous:hover, .next:hover {
+  transform: scale(1.05); /* Efek zoom saat di-hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animasi hover untuk gambar panah */
+.previous:hover img {
+  transform: translateX(-10px); /* Panah previous bergerak ke kiri */
+  transition: transform 0.3s ease;
+}
+
+.next:hover img {
+  transform: translateX(10px) rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
 /* End Previous and Next */
+
+/* Subscribe */
+.subscribe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto; /* Centers horizontally */
+}
+
+h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="email"]:focus {
+  border-color: #00b4d8;
+}
+
+.subscribe-btn {
+  width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  background: linear-gradient(to right, #00B4BA, #60EFB8);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background: linear-gradient(to right, #0096c7, #3dd9af);
+  animation: scaleUp 0.3s forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+/* End Subscribe */
+
+/* Comment Form */
+.comment-box {
+  padding-bottom: 10px;
+}
+
+.comment-content h6 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment-content p {
+  margin-bottom: 5px;
+}
+
+.reply-link {
+  color: #00b4d8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.reply-link:hover {
+  text-decoration: underline;
+}
+
+.comment-date {
+  font-size: 14px;
+  color: #777;
+}
+
+.comment-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-divider {
+  border: none;
+  background: linear-gradient(to right, #001caa, #3CE9E7);
+  width: 100%;
+  height: 3px;
+  margin: 20px auto;
+}
+
+/* Comment Form Styling */
+.comment-form-section img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #1C42FD;
+  border: none;
+  margin-top: 3%;
+  width: 120px;
+  height: 35px;
+}
+
+.btn-primary:hover {
+  background-color: #0096c7;
+}
+/* End Comment Form */
 
 /* Footer */
 footer {
+  margin-top: 7%;
  background: #212529;
  color: #fff;
  width: 100vw;
  position: relative;
- margin: 0;
  padding: 2rem 0;
 }
 
@@ -244,4 +392,14 @@ footer a {
 
 footer a:hover {
  text-decoration: underline;
+}
+
+/* Animasi */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
 }

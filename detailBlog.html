@@ -36,17 +36,21 @@
   <!-- End Navbar -->
 
   <!-- Blog Content -->
-  <div class="container mt-5 content-area">
-    <h2 class="text-center">Memahami Dasar-Dasar Desain UI/UX untuk Pemula</h2>
-    <p class="text-center mt-5 mb-5">Created by: Unknown</p>
-    <img src="image/uiux.png" class="img-fluid mx-auto d-block" alt="UI/UX Illustration">
+  <div class="container mt-5 content-area fade-in">
+    <h2 class="text-center animate__animated animate__fadeIn">Memahami Dasar-Dasar Desain UI/UX untuk Pemula</h2>
+    <p class="text-center mt-5 mb-5 animate__animated animate__fadeIn">Created by: Unknown</p>
+    <img src="image/uiux.png" class="img-fluid mx-auto d-block animate__animated animate__slideInUp" alt="UI/UX Illustration">
     <p class="mt-4">Dalam era digital saat ini, desain antarmuka pengguna (User Interface/UI) dan pengalaman pengguna (User Experience/UX) menjadi elemen penting dalam pengembangan produk digital. Namun, banyak yang masih bingung tentang apa itu UI/UX dan bagaimana memulai mempelajarinya. Artikel ini akan menjelaskan konsep dasar UI/UX dan memberikan tips sederhana untuk memulai perjalanan Anda sebagai desainer.
     </p>
     <p class="mt-4">Apa Itu UI dan UX?</p>
     <p class="mt-4">User Interface (UI) adalah tampilan visual dari sebuah aplikasi atau situs web yang mencakup elemen-elemen seperti tombol, ikon, tipografi, warna, dan tata letak. UI bertujuan untuk menciptakan antarmuka yang menarik secara estetika dan mudah digunakan.User Experience (UX) adalah bagaimana pengguna berinteraksi dengan produk Anda. UX melibatkan keseluruhan pengalaman pengguna, termasuk kemudahan navigasi, kecepatan respons, dan kepuasan yang dirasakan saat menggunakan produk. UX yang baik adalah yang membuat pengguna merasa nyaman dan tujuan mereka tercapai dengan mudah.</p>
+    
+    <!-- ADDS -->
     <div class="ad-between">
-      <img class="image" src="image/banner-spanduk-iklan-reklame-papan-nama-laundry-gendhis 1.png" alt="">
+      <img class="image animate__animated animate__bounce" src="image/banner-spanduk-iklan-reklame-papan-nama-laundry-gendhis 1.png" alt="">
     </div>
+    <!-- End ADDS -->
+    
     <p class="mt-4">Prinsip Dasar Desain UI/UX:</p>
     <p class="mt-4">
       <ol>
@@ -94,7 +98,7 @@
    <!-- End Advertisement -->
 
    <!-- Next and Previous -->
-  <div class="navigation">
+  <div class="navigation animate__animated animate__fadeIn">
     <div class="previous">
         <div class="content-wrapper">
             <img src="image/ChevronDouble.png" alt="Chevron Left">
@@ -115,38 +119,92 @@
         </div>
     </div>
   </div>
-
-
    <!-- End Next and Previous -->
 
-  <!-- Comments Section -->
-  <div class="container mt-4">
-    <h4>Comments:</h4>
-    <div class="comment-box">
-      <p><strong>Aldi</strong> - 22 Nov 2024</p>
-      <p>Isi komentar dan si pembaca</p>
-      <hr>
+   <!-- Subscribe -->
+    <div class="subscribe-container mt-5 mb-5">
+      <h3>Dapatkan notifikasi email pada setiap postingan baru</h3>
+      <form action="">
+        <input class="email-address" type="email" placeholder="email address" required>
+        <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+      </form>
     </div>
-    <div class="comment-box">
-      <p><strong>Aldi</strong> - 22 Nov 2024</p>
-      <p>Isi komentar dan si pembaca</p>
-      <hr>
+   <!-- End Subscribe -->
+
+
+        <!-- Comment Form -->
+   <div class="container mt-5">
+    <!-- Comments Section -->
+    <hr class="comment-divider">
+    <div class="comments-section">
+        <h4 class="mb-4">Comments :</h4>
+
+        <!-- Comment 1 -->
+        <div class="comment-box d-flex align-items-start mb-4">
+            <img src="image/comentator.jpg" alt="user1" class="rounded-circle me-3">
+            <div class="comment-content">
+                <h6>Aldi</h6>
+                <p>isi komentar dan si pembaca</p>
+                <a href="#" class="reply-link">Reply</a>
+            </div>
+            <span class="ms-auto comment-date">22 nov 2024</span>
+        </div>
+
+        <hr class="comment-divider">
+
+        <!-- Comment 2 -->
+        <div class="comment-box d-flex align-items-start mb-4">
+            <img src="image/comentator.jpg" alt="user2" class="rounded-circle me-3">
+            <div class="comment-content">
+                <h6>Aldi</h6>
+                <p>isi komentar dan si pembaca</p>
+                <a href="#" class="reply-link">Reply</a>
+            </div>
+            <span class="ms-auto comment-date">22 nov 2024</span>
+        </div>
+
+        <hr class="comment-divider">
+
+        <!-- Comment 3 -->
+        <div class="comment-box d-flex align-items-start mb-4">
+            <img src="image/comentator.jpg" alt="user3" class="rounded-circle me-3">
+            <div class="comment-content">
+                <h6>Aldi</h6>
+                <p>isi komentar dan si pembaca</p>
+                <a href="#" class="reply-link">Reply</a>
+            </div>
+            <span class="ms-auto comment-date">22 nov 2024</span>
+        </div>
     </div>
-    <!-- Comment Form -->
-    <h4>Berikan Komentar</h4>
-    <form>
-      <div class="mb-3">
-        <label for="nama" class="form-label">Nama:</label>
-        <input type="text" class="form-control" id="nama" placeholder="Masukkan nama kamu">
-      </div>
-      <div class="mb-3">
-        <label for="komentar" class="form-label">Komentar:</label>
-        <textarea class="form-control" id="komentar" rows="3" placeholder="Isi komentar"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Publish</button>
-    </form>
-  </div>
-  <!-- End Comments Section -->
+
+    <hr class="comment-divider">
+
+    <!-- Comment Form Section -->
+    <div class="comment-form-section mt-5">
+        <h4 class="mb-4 text-center">Berikan Komentar</h4>
+
+        <!-- User Avatar -->
+        <div class="text-center">
+            <img src="image/comentator.jpg" alt="user-avatar" class="rounded-circle">
+        </div>
+
+        <!-- Comment Form -->
+        <form action="#" method="POST" class="mt-4">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nama :</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Masukkan nama kamu">
+            </div>
+            <div class="mb-3">
+                <label for="comment" class="form-label">Komentar :</label>
+                <textarea id="comment" name="comment" class="form-control" rows="5" placeholder="isi komentar"></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">PUBLISH</button>
+            </div>
+        </form>
+    </div>
+</div>
+          <!-- End Comment Form -->
 
   <!-- Footer -->
   <footer class="bg-dark text-white py-4 animate__animated animate__fadeInUp">
@@ -177,5 +235,6 @@
 
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/detailBlog.js"></script>
 </body>
 </html>
