@@ -1,77 +1,106 @@
 body {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 .contact-container {
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
 }
+
 .left-side {
-    background: linear-gradient(to bottom, #1C42FD, #3CE9E7);
-    color: white;
-    padding: 40px;
-    border-radius: 10px 0 0 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #1c42fd, #3ce9e7);
+  color: white;
+  padding: 40px;
+  /* border-radius: 10px 0 0 10px; */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 .right-side {
-    background: white;
-    padding: 40px;
-    border-radius: 0 10px 10px 0;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 40px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 .btn-gradient {
-    background: linear-gradient(to right, #1C42FD, #3CE9E7);
-    font-size: 20px;
-    border: none;
-    color: white;
+  background: linear-gradient(to right, #1c42fd, #3ce9e7);
+  font-size: 20px;
+  border: none;
+  color: white;
 }
 .btn-gradient:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 .box-shadow {
-    box-shadow: solid 0 16px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: solid 0 16px 32px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
-    .left-side {
-        text-align: center;
-        padding: 20px;
-        border-radius: 10px 10px 0 0;
-    }
-    .right-side {
-        border-radius: 0 0 10px 10px;
-        padding: 20px;
-    }
+  .left-side {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+  }
+  .right-side {
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+  }
 }
 
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
 
-    .left-side, .right-side {
-        width: 100%;
-        border-radius: 10px;
-        padding: 20px;
-    }
+  .left-side,
+  .right-side {
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+  }
 
-    .btn-gradient {
-        width: 100%;
-    }
+  .btn-gradient {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
-    .contact-container {
-        padding: 10px;
-    }
+  .contact-container {
+    padding: 10px;
+  }
 
-    .left-side, .right-side {
-        padding: 15px;
-    }
+  .left-side,
+  .right-side {
+    padding: 15px;
+  }
 
-    .btn-gradient {
-        font-size: 18px;
+  .btn-gradient {
+    font-size: 18px;
+  }
+}
+
+.container.contact-container {
+    position: relative; /* Pastikan kontainer utama diatur secara relatif */
+}
+
+.corner-image {
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 150px; /* Sesuaikan ukuran gambar */
+    height: 150px;
+    transform: scaleX(-1) rotate(91deg); /* Membalik gambar secara horizontal dan rotasi */
+    animation: zoomIn 1s; /* Efek animasi */
+    
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
