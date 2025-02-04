@@ -43,3 +43,35 @@ body {
         padding: 20px;
     }
 }
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .btn-gradient {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-container {
+        padding: 10px;
+    }
+
+    .left-side, .right-side {
+        padding: 15px;
+    }
+
+    .btn-gradient {
+        font-size: 18px;
+    }
+}

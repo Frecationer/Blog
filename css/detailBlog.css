@@ -410,3 +410,53 @@ footer a:hover {
 .visible {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .content-area {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .ad-space {
+      display: none;
+  }
+
+  .ad-between {
+      max-width: 80%;
+  }
+
+  .navigation {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+      font-size: 1.5rem;
+      text-align: center;
+  }
+
+  .content-area {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .ad-between {
+      max-width: 100%;
+  }
+
+  .subscribe-container {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .comment-box img {
+      width: 80px;
+      height: 80px;
+  }
+
+  .btn-primary {
+      width: 100%;
+  }
+}
