@@ -103,12 +103,13 @@ h1 {
 }
 
 input.form-control {
-  height: 50px;
+  height: 40px;
   font-size: 1.2rem;
   padding: 10px 20px;
 }
 
 .input-group .btn {
+  height: 40px;
   background: linear-gradient(to right, #00B4BA, #60EFB8);
   border: none;
   color: #fff;
@@ -337,13 +338,13 @@ h1 {
   font-size: 0.9rem; /* Kurangi ukuran font pada tombol */
 }
 
+.btn-outline-success {
+  width: 100%; /* Tombol menjadi full-width pada layar ponsel */
+}
+
 .card {
   max-width: 100%; /* Buat card memenuhi lebar layar */
   margin: 10px; /* Tambah margin agar tidak terlalu menempel di tepi */
-}
-
-.btn-outline-success {
-  width: 100%; /* Tombol menjadi full-width pada layar ponsel */
 }
 
 .card-body p {
@@ -355,7 +356,7 @@ h1 {
 }
 
 .button-container {
-  flex-direction: column; /* Buat tombol-tombol berbaris vertikal pada layar kecil */
+  justify-content: center;
 }
 
 footer h5, footer p {
