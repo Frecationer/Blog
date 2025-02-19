@@ -214,7 +214,7 @@ a.btn-outline-success:hover {
 .card-text {
   max-height: 3.6em;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  line-clamp: 2;
   position: relative;
   -webkit-box-orient: vertical;
   overflow: hidden;
