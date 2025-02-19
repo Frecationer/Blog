@@ -6,7 +6,7 @@
 }
 
 body {
- font-family: "poppins", sans-serif;
+ font-family: 'Poppins', sans-serif;
  background-color: #f8f9fa;
  color: #333;
  height: 100%;
@@ -225,7 +225,7 @@ body {
 
 /* Tambahkan animasi hover untuk Previous dan Next */
 .content-wrapper:hover {
-  transform: scale(1.05); /* Efek zoom saat di-hover */
+  transform: scale(1.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -251,7 +251,7 @@ body {
   padding: 20px;
   max-width: 500px;
   width: 100%;
-  margin: 0 auto; /* Centers horizontally */
+  margin: 0 auto;
 }
 
 h3 {

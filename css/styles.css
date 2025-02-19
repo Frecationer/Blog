@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #f8f9fa;
   color: #333;
   height: 100%;
@@ -168,6 +168,7 @@ a.btn-outline-success:hover {
   width: 100%;
   max-width: 350px;
   margin: auto;
+  position: relative;
   border: none;
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -264,11 +265,11 @@ footer a:hover {
 @keyframes customZoomIn {
 0% {
   opacity: 0;
-  transform: scale(0.9) scaleY(-1) scaleX(-1); /* Zoom kecil tetap terbalik */
+  transform: scale(0.9) scaleY(-1) scaleX(-1);
  }
 100% {
   opacity: 1;
-  transform: scale(1) scaleY(-1) scaleX(-1); /* Zoom normal, tetap terbalik */
+  transform: scale(1) scaleY(-1) scaleX(-1);
  }
 }
 
@@ -283,76 +284,151 @@ footer a:hover {
  }
 }
 
- /* Responsif untuk Tablet (Layar dengan lebar maksimal 768px) */
-@media (max-width: 768px) {
-h1 {
-  font-size: 2rem; /* Mengurangi ukuran font untuk judul */
-}
+/* Responsive styling for screens with max-width 991px */
+@media (max-width: 991px) {
+  /* Adjust navbar brand and collapse behavior */
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
 
-.navbar-brand {
-  font-size: 1.3rem; /* Sesuaikan ukuran font brand pada navbar */
-}
+  .navbar-collapse {
+    justify-content: center;
+  }
 
+  /* Adjust search bar */
+  .input-group {
+    flex-wrap: nowrap;
+  }
+  .input-group .form-control {
+    flex: 1;
+  }
+  .input-group .btn {
+    flex-shrink: 0;
+    width: auto;
+  }
+
+  /* Adjust category buttons */
+  .button-container .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Adjust card layout */
 .card {
-  max-width: 300px; /* Kurangi ukuran maksimum card */
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.button-container {
+  .col-md-4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Adjust pagination */
+  .pagination .page-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Adjust footer layout */
+  footer .row {
+    flex-direction: column;
+  }
+  footer .col-md-3 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive styling for screens with max-width 767px */
+@media (max-width: 767px) {
+/* Adjust navbar elements */
+.navbar {
+  text-align: center;
+}
+.navbar-brand {
+  margin: 0 auto;
+}
+.navbar-collapse {
   justify-content: center;
 }
 
-.btn-outline-success {
-  width: 45%; /* Setengah lebar pada layar lebih kecil */ 
+  /* Adjust search bar */
+.input-group {
+  flex-wrap: nowrap;
+}
+.input-group .form-control {
+  flex: 1;
+}
+.input-group .btn {
+  width: auto;
+  flex-shrink: 0;
+}
+
+/* Adjust category buttons */
+.button-container .btn {
+  display: block;
+  width: 100%;
   margin-bottom: 10px;
 }
 
-a.btn-outline-success {
+/* Adjust card layout */
+.content-section .row {
+  flex-direction: column;
+}
+.col-md-4 {
   width: 100%;
-  flex-basis: 100%;
+  margin-bottom: 20px;
 }
 
-.content-section {
-  margin-top: 200px; /* Kurangi margin untuk menghemat ruang pada layar kecil */
+/* Adjust footer layout */
+footer .row {
+  flex-direction: column;
+}
+footer .col-md-3 {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.corner-image {
-  max-width: 300px; /* Sesuaikan ukuran gambar pojok */
+/* Adjust pagination */
+.pagination {
+  flex-wrap: wrap;
 }
-
-footer h5, footer p {
-  font-size: 0.8rem; /* Kurangi ukuran font footer */
+.pagination .page-link {
+  padding: 0.75rem 1rem;
 }
 }
 
 /* Responsif untuk Ponsel (Layar dengan lebar maksimal 576px) */
 @media (max-width: 576px) {
 h1 {
-  font-size: 1.5rem; /* Lebih kecil lagi untuk ponsel */
+  font-size: 1.5rem;
 }
 
 .navbar-brand {
-  font-size: 1.2rem; /* Lebih kecil lagi pada brand navbar */
+  font-size: 1.2rem;
 }
 
 .input-group .btn {
-  font-size: 0.9rem; /* Kurangi ukuran font pada tombol */
+  font-size: 0.9rem;
 }
 
 .btn-outline-success {
-  width: 100%; /* Tombol menjadi full-width pada layar ponsel */
+  width: 100%;
 }
 
 .card {
-  max-width: 100%; /* Buat card memenuhi lebar layar */
-  margin: 10px; /* Tambah margin agar tidak terlalu menempel di tepi */
+  max-width: 100%;
+  margin: 10px;
 }
 
 .card-body p {
-  font-size: 0.8rem; /* Kurangi ukuran font dalam card */
+  font-size: 0.8rem;
 }
 
 .corner-image {
-  max-width: 250px; /* Ukuran lebih kecil untuk ponsel */
+  max-width: 250px;
 }
 
 .button-container {
@@ -360,10 +436,10 @@ h1 {
 }
 
 footer h5, footer p {
-  font-size: 0.7rem; /* Lebih kecil lagi untuk footer */
+  font-size: 0.7rem;
 }
 
 .blog-decoration img {
-  width: 150px; /* Sesuaikan ukuran dekorasi blog */
+  width: 150px;
 }
 }

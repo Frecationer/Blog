@@ -1,106 +1,130 @@
 body {
   background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-.contact-container {
+
+.container.contact-container {
   display: flex;
-  min-height: 100vh;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+  min-height: 50vh;
+  max-height: 700px;
+  padding: 50px;
+}
+
+.left-side, .right-side {
+  flex: 1;
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+  animation: fadeIn 1.5s ease-in forwards;
+  opacity: 0;
 }
 
 .left-side {
   background: linear-gradient(to bottom, #1c42fd, #3ce9e7);
   color: white;
-  padding: 40px;
-  /* border-radius: 10px 0 0 10px; */
+  text-align: left;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
+
 .right-side {
   background: white;
-  padding: 40px;
-  border-radius: 0 10px 10px 0;
+  font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
+
 .btn-gradient {
   background: linear-gradient(to right, #1c42fd, #3ce9e7);
   font-size: 20px;
   border: none;
   color: white;
+  width: 100%;
+  transition: opacity 0.3s;
 }
+
 .btn-gradient:hover {
   opacity: 0.9;
 }
-.box-shadow {
-  box-shadow: solid 0 16px 32px rgba(0, 0, 0, 0.1);
+
+.corner-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: auto;
+  transform: scaleY(-1) scaleX(-1);
+  z-index: 10;
+  animation: fadeIn 1.5s ease-in forwards;
+  opacity: 0;
 }
 
+/* Media queries untuk layar yang lebih kecil */
 @media (max-width: 768px) {
-  .left-side {
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px 10px 0 0;
-  }
-  .right-side {
-    border-radius: 0 0 10px 10px;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .left-side,
-  .right-side {
-    width: 100%;
-    border-radius: 10px;
-    padding: 20px;
-  }
-
-  .btn-gradient {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-container {
-    padding: 10px;
-  }
-
-  .left-side,
-  .right-side {
-    padding: 15px;
-  }
-
-  .btn-gradient {
-    font-size: 18px;
-  }
+.left-side, .right-side {
+  flex: 100%;
+  max-width: 100%;
+  padding: 20px;
 }
 
 .container.contact-container {
-    position: relative; /* Pastikan kontainer utama diatur secara relatif */
+  padding: 10px;
 }
 
 .corner-image {
-    position: absolute;
-    top: 0;
-    right: -30px;
-    width: 150px; /* Sesuaikan ukuran gambar */
-    height: 150px;
-    transform: scaleX(-1) rotate(91deg); /* Membalik gambar secara horizontal dan rotasi */
-    animation: zoomIn 1s; /* Efek animasi */
-    
+  width: 150px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scaleY(-1) scaleX(-1);
 }
 
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.btn-gradient {
+  font-size: 18px;
+}
+}
+
+@media (max-width: 576px) {
+.container.contact-container {
+  flex-direction: column;
+  padding: 50px;
+  justify-content: center;
+  padding-top: 80vh;
+  align-items: center;
+  min-height: 50vh;
+  width: 100vh;
+  height: 100vh;
+}
+
+.left-side, .right-side {
+  height: 50vh;
+  padding: 30px;
+  text-align: left;
+}
+
+.btn-gradient {
+  font-size: 16px;
+}
+
+.corner-image {
+  width: 250px;
+  transform: scaleY(-1) scaleX(-1);
+}
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 2;
+  }
 }
