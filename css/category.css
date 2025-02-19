@@ -182,6 +182,10 @@ a.btn-outline-success:hover {
 }
 
 /* Cards */
+.btn:hover {
+  text-decoration: underline;
+}
+
 .card {
  border: none;
  border-radius: 20px;
@@ -205,6 +209,21 @@ a.btn-outline-success:hover {
  height: 300px;
  width: 100%;
  object-fit: cover;
+}
+
+.card-text {
+  max-height: 3.6em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  position: relative;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.card-text:hover {
+  text-decoration: underline;
 }
 
 .card-body p {
