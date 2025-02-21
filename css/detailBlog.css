@@ -96,10 +96,12 @@ body {
 }
 
 .ad-space {
- position: absolute;
+ position: fixed;
  top: 20%;
+ bottom: 10%;
  width: 200px;
  height: 600px;
+ z-index: 10;
 }
 
 .ad-space .image {
@@ -125,7 +127,6 @@ body {
 }
 
 .right-ad {
- margin-top: 30%;
  right: 20px;
 }
 

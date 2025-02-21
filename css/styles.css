@@ -48,25 +48,48 @@ body {
   font-weight: 500;
 }
 
-.nav-link.active {
-  color: #000000 !important;
-}
-
 .image {
   width: 50px;
   height: auto;
   margin-right: 10px;
 }
 
+#navbarNav a {
+  transition: 0.3s;
+}
+
+#navbarNav a:hover {
+  color: #00B4BA;
+}
+
 /* Navbar Category Button with Gradient Border */
 .navbar .dropdown-toggle {
-  border: 2px solid transparent;
-  border-image: linear-gradient(to right, #00B4BA, #60EFB8) 1;
+  position: relative;
   padding: 6px 15px;
   color: #000000;
   background-color: transparent;
   font-weight: 500;
   transition: all 0.3s ease;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.navbar .dropdown-toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 2px;
+  background: linear-gradient(to right, #00B4BA, #60EFB8);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
 }
 
 .navbar .dropdown-toggle:hover {
@@ -91,7 +114,7 @@ body {
 
 /* Page Title */
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
   margin-top: 30px;
   animation: fadeIn 1.2s ease-in-out;
@@ -103,13 +126,13 @@ h1 {
 }
 
 input.form-control {
-  height: 40px;
+  height: 50px;
   font-size: 1.2rem;
   padding: 10px 20px;
 }
 
 .input-group .btn {
-  height: 40px;
+  height: 50px;
   background: linear-gradient(to right, #00B4BA, #60EFB8);
   border: none;
   color: #fff;
@@ -124,8 +147,8 @@ a.btn-outline-success {
   border: none;
   line-height: 25px;
   color: #ffffff;
-  height: 40px;
-  width: 100px;
+  height: 50px;
+  width: 120px;
   animation: bounceIn 1.2s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* flex-basis: calc(20% - 10px); */
