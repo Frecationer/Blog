@@ -238,7 +238,7 @@ footer {
   background: #212529;
   color: #fff;
   width: 100%;
-  animation: fadeInUp 1.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
 footer h5 {
@@ -258,6 +258,14 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+footer img {
+  width: 50px;
+  height: 50px;
+  /* background-color: white; */
+  border-radius: 8px;
+  padding: 5px;
 }
 
 /* Blog Decoration */
