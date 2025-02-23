@@ -15,79 +15,101 @@ body {
 
 /* Navbar */
 .navbar {
- background: white;
- border-bottom: 20px #000000;
- animation: fadeInDown 1s ease-in-out;
+  background: white;
+  border-bottom: 20px #000000;
+  animation: fadeInDown 1s ease-in-out;
 }
 
 .navbar-gradient-shadow{
- position: relative;
+  position: relative;
 }
 
 .navbar-gradient-shadow::before{
- content: '';
- position: absolute;
- top: 100%;
- left: 0;
- width: 100%;
- height: 5px;
- background: linear-gradient(to right, #1C42FD, #00B4BA);
- z-index: -1;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Adjust the height of the shadow */
+  background: linear-gradient(to right, #1C42FD, #00B4BA);
+  z-index: -1;
 }
 
 .navbar-brand {
- font-size: 1.5rem;
- font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .navbar-brand span {
- color: #00bfa6;
+  color: #00bfa6;
 }
 
 .nav-link {
- font-weight: 500;
+  font-weight: 500;
 }
 
-.nav-link.active {
- color: #000000 !important;
-}
-
-/* Logo Navbar */
 .image {
- width: 50px;
- height: auto;
- margin-right: 10px;
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#navbarNav a {
+  transition: 0.3s;
+}
+
+#navbarNav a:hover {
+  color: #00B4BA;
 }
 
 /* Navbar Category Button with Gradient Border */
 .navbar .dropdown-toggle {
- border: 2px solid transparent;
- border-image: linear-gradient(to right, #00B4BA, #60EFB8) 1;
- padding: 6px 15px;
- color: #000000;
- background-color: transparent;
- font-weight: 500;
- transition: all 0.3s ease;
+  position: relative;
+  padding: 6px 15px;
+  color: #000000;
+  background-color: transparent;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.navbar .dropdown-toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 2px;
+  background: linear-gradient(to right, #00B4BA, #60EFB8);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
 }
 
 .navbar .dropdown-toggle:hover {
- background-image: linear-gradient(to right, #00B4BA, #006F76);
- color: #fff;
+  background-image: linear-gradient(to right, #00B4BA, #006F76);
+  color: #fff !important;
 }
 
 .dropdown-menu {
- border-radius: 10px;
- border: none;
- box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-item {
- padding: 10px 20px;
+  padding: 10px 20px;
 }
 
 .dropdown-item:hover {
- background-color: #00bfa6;
- color: #fff;
+  background-color: #00bfa6;
+  color: #fff;
 }
 
 /* Gambar Hiasan */

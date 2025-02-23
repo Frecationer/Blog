@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="image/F.png" type="image/png">
   <title>Memahami Dasar-Dasar Desain UI/UX</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,11 +21,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Category</a>
-            <ul class="dropdown-menu">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#">UI/UX</a></li>
               <li><a class="dropdown-item" href="#">Backend</a></li>
               <li><a class="dropdown-item" href="#">Front-end</a></li>
@@ -38,6 +45,17 @@
 
   <!-- Blog Content -->
   <div class="container mt-5 content-area fade-in">
+    <div class="selected-content d-flex">
+      <div class="date d-flex align-items-center">
+        <img src="image/tanggal.png" alt="Calendar Icon" style="width: 24px; height: 24px; margin-right: 5px;">
+        <span class="fw-bold">20 November 2024</span>
+      </div>
+      
+      <div class="selected d-flex align-items-center">
+        <img src="image/selected.png" alt="Category Icon" style="width: 24px; height: 24px; margin-right: 5px;">
+        <span class="fw-bold">Selected Category</span>
+      </div>
+    </div>
     <h2 class="text-center animate__animated animate__fadeIn">Memahami Dasar-Dasar Desain UI/UX untuk Pemula</h2>
     <p class="text-center mt-5 mb-5 animate__animated animate__fadeIn">Created by: Unknown</p>
     <img src="image/uiux.png" class="img-fluid mx-auto d-block animate__animated animate__slideInUp" alt="UI/UX Illustration">
@@ -90,17 +108,17 @@
   <!-- End Blog Content -->
 
   <!-- Advertisement -->
-  <div class="ad-space left-ad">
+  <div class="ad-space left-ad fade-in">
     <img class="image" src="image/d82j5sb-d3adb61e-c07e-45fe-90fb-9329390e0c76 2.png" alt="adds">
   </div>
-  <div class="ad-space right-ad">
+  <div class="ad-space right-ad fade-in">
     <img class="image" src="image/d82j5sb-d3adb61e-c07e-45fe-90fb-9329390e0c76 2.png" alt="adds">
   </div>
    <!-- End Advertisement -->
 
    <!-- Next and Previous -->
   <div class="navigation animate__animated animate__fadeIn">
-    <div class="previous">
+    <a class="previous" href="#">
         <div class="content-wrapper">
             <img src="image/ChevronDouble.png" alt="Chevron Left">
             <div class="text-group">
@@ -108,9 +126,9 @@
                 <p>Belajar Design UI/UX</p>
             </div>
         </div>
-    </div>
+    </a>
     <div class="separator"></div>
-    <div class="next">
+    <a class="next" href="#">
         <div class="content-wrapper">
             <div class="text-group">
                 <span>NEXT</span>
@@ -118,7 +136,7 @@
             </div>
             <img class="flip" src="image/ChevronDouble.png" alt="Chevron Right">
         </div>
-    </div>
+    </a>
   </div>
    <!-- End Next and Previous -->
 
@@ -141,7 +159,8 @@
         <h4 class="mb-4">Comments :</h4>
 
         <!-- Comment 1 -->
-        <div class="comment-box d-flex align-items-start mb-4">
+        <div class="comment">
+          <div class="comment-box d-flex mb-4">
             <img src="image/comentator.jpg" alt="user1" class="rounded-circle me-3">
             <div class="comment-content">
                 <h6>Aldi</h6>
@@ -150,11 +169,13 @@
             </div>
             <span class="ms-auto comment-date">22 nov 2024</span>
         </div>
-
         <hr class="comment-divider">
+        </div>
+        
 
         <!-- Comment 2 -->
-        <div class="comment-box d-flex align-items-start mb-4">
+        <div class="comment">
+          <div class="comment-box d-flex mb-4">
             <img src="image/comentator.jpg" alt="user2" class="rounded-circle me-3">
             <div class="comment-content">
                 <h6>Aldi</h6>
@@ -163,11 +184,12 @@
             </div>
             <span class="ms-auto comment-date">22 nov 2024</span>
         </div>
-
         <hr class="comment-divider">
+        </div>
 
-        <!-- Comment 3 -->
-        <div class="comment-box d-flex align-items-start mb-4">
+        <!-- Reply Comment -->
+        <div class="reply">
+          <div class="comment-reply d-flex mb-4">
             <img src="image/comentator.jpg" alt="user3" class="rounded-circle me-3">
             <div class="comment-content">
                 <h6>Aldi</h6>
@@ -176,8 +198,8 @@
             </div>
             <span class="ms-auto comment-date">22 nov 2024</span>
         </div>
+        </div>
     </div>
-
     <hr class="comment-divider">
 
     <!-- Comment Form Section -->
@@ -211,23 +233,21 @@
   <footer class="bg-dark text-white py-4 animate__animated animate__fadeInUp">
     <div class="container">
       <div class="row text-center">
-        <div class="col-sm-12 col-md-3 mb-3">
+        <div class="col-sm-12 col-md-4 mb-3">
           <h5>Navigasi</h5>
           <p>Blog</p>
           <p>Contact</p>
         </div>
-        <div class="col-sm-12 col-md-3 mb-3">
+        <div class="col-sm-12 col-md-4 mb-3">
           <h5>Contact</h5>
           <p>freactioner.official@gmail.com</p>
-        </div>
-        <div class="col-sm-12 col-md-3 mb-3">
           <h5>Address</h5>
           <p>East Java - Indonesia</p>
         </div>
-        <div class="col-sm-12 col-md-3 mb-3">
+        <div class="col-sm-12 col-md-4 mb-3">
           <h5>Follow Us</h5>
-          <p>Instagram</p>
-          <p>Website</p>
+          <a href="#" style="padding: 5px;"><img src="image/discord.png" alt=""></a>
+          <a href="https://www.instagram.com/frecationer.official/" style="padding: 5px;"><img src="image/instagram.png" alt=""></a>
         </div>
       </div>
     </div>

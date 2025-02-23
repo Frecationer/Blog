@@ -47,30 +47,53 @@ body {
   font-weight: 500;
 }
 
-.nav-link.active {
-  color: #000000 !important;
-}
-
 .image {
   width: 50px;
   height: auto;
   margin-right: 10px;
 }
 
+#navbarNav a {
+  transition: 0.3s;
+}
+
+#navbarNav a:hover {
+  color: #00B4BA;
+}
+
 /* Navbar Category Button with Gradient Border */
 .navbar .dropdown-toggle {
-  border: 2px solid transparent;
-  border-image: linear-gradient(to right, #00B4BA, #60EFB8) 1;
+  position: relative;
   padding: 6px 15px;
   color: #000000;
   background-color: transparent;
   font-weight: 500;
   transition: all 0.3s ease;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.navbar .dropdown-toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 2px;
+  background: linear-gradient(to right, #00B4BA, #60EFB8);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
 }
 
 .navbar .dropdown-toggle:hover {
   background-image: linear-gradient(to right, #00B4BA, #006F76);
-  color: #fff;
+  color: #ffff !important;
 }
 
 .dropdown-menu {
@@ -89,62 +112,71 @@ body {
 }
 
 /* Blog Content */
+.selected-content {
+  justify-content: center;
+  align-items: center;
+  gap: 10;
+  margin-bottom: 30px;
+}
+
+.selected-content .selected {
+  margin-left: 25px;
+}
+
 .content-area {
  width: 60%; /* Reduce width to leave space for ads */
  margin: 0 auto;
  padding: 20px;
 }
 
+.adds {
+  background-color: #000000 !important;
+  height: 1000px;
+}
+
 .ad-space {
- position: fixed;
- top: 20%;
- bottom: 10%;
- width: 200px;
- height: 600px;
- z-index: 10;
+  display: flex; /* Menggunakan Flexbox */
+  flex-direction: column; /* Susunan elemen secara vertikal */
+  align-items: center; /* Memastikan konten berada di tengah secara horizontal */
+  justify-content: flex-start; /* Membuat gambar tetap di atas */
+  background-color: rgb(209, 209, 209);
+  position: absolute;
+  top: 20%;
+  bottom: 10%;
+  width: 200px;
+  height: 2500px;
+  z-index: 10;
+  padding: 20px; /* Memberi ruang di sekitar konten */
 }
 
 .ad-space .image {
- width: 100%;
- height: 100%;
+  position: sticky;
+  top: 20px;
+  width: 100%;
+  max-height: 700px; /* tinggi maksimum gambar */
+  object-fit: contain;
 }
 
 .ad-between {
- display: block;
- width: auto;
- max-width: 60%;
- text-align: center;
- padding: 10px;
- margin: 20px auto;
+  display: block;
+  width: auto;
+  max-width: 60%;
+  text-align: center;
+  padding: 10px;
+  margin: 20px auto;
 }
 
 .ad-between .image {
- width: 100%;
+  width: 100%;
 }
 
 .left-ad {
- left: 20px;
+  left: 0px;
 }
 
 .right-ad {
- right: 20px;
+  right: 0px;
 }
-
-@media (max-width: 1200px) {
- .ad-space {
-     display: none;
- }
-
- .ad-between {
-     font-size: 1em;
- }
-
- .content-area {
-     width: 90%;
-     padding: 10px;
- }
-}
-
 /* End Blog Content */
 
 /* Previous and Next */
@@ -161,6 +193,8 @@ body {
  align-items: center;
  flex-grow: 1;
  justify-content: center;
+ text-decoration: none;
+ color: inherit;
 }
 
 .content-wrapper {
@@ -305,16 +339,39 @@ input[type="email"]:focus {
 /* Comment Form */
 .comment-box {
   padding-bottom: 10px;
+  align-items: center;
+}
+
+.comment-box img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-reply {
+  margin-left: 100px;
+  align-items: center;
+}
+
+.comment-reply img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-content {
+  margin-left: 130px;
+  margin-bottom: 5px;
+  width: 700px;
 }
 
 .comment-content h6 {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.comment-content p {
-  margin-bottom: 5px;
 }
 
 .reply-link {
@@ -328,15 +385,9 @@ input[type="email"]:focus {
 }
 
 .comment-date {
+  position: relative;
   font-size: 14px;
   color: #777;
-}
-
-.comment-box img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 .comment-divider {
@@ -412,6 +463,21 @@ footer a:hover {
   opacity: 1;
 }
 
+@media (max-width: 1200px) {
+.ad-space {
+  display: none;
+}
+
+.ad-between {
+  font-size: 1em;
+}
+
+.content-area {
+    width: 90%;
+    padding: 10px;
+ }
+}
+
 @media (max-width: 768px) {
   .content-area {
       width: 90%;
@@ -460,4 +526,10 @@ footer a:hover {
   .btn-primary {
       width: 100%;
   }
+}
+
+@media (max-width: 353px) {
+html {
+  
+}
 }
