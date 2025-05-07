@@ -63,6 +63,11 @@ body {
 }
 
 /* Navbar Category Button with Gradient Border */
+/* #category {
+  margin-top: 0.5rem;
+  min-width: 100%;
+} */
+
 .navbar .dropdown-toggle {
   position: relative;
   padding: 6px 15px;
@@ -195,10 +200,6 @@ a.btn-outline-success:hover {
 }
 
 /* Efek halus pada pilihan saat select terbuka */
-.form-select:active {
- transform: scale(1);
-}
-
 .form-select:focus {
  outline: none;
 }
@@ -381,3 +382,10 @@ h1 {
   font-size: 0.9rem;
 }
 }
+
+/* @media (max-width: 400px) {
+  #category {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+  }
+} */

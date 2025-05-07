@@ -1,5 +1,5 @@
 body {
-  background-color: #f8f9fa;
+  background-color: #cccccc;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -92,18 +92,19 @@ body {
 @media (max-width: 576px) {
 .container.contact-container {
   flex-direction: column;
-  padding: 50px;
+  padding: 20px;
+  margin-top: 5%;
   justify-content: center;
-  padding-top: 80vh;
   align-items: center;
-  min-height: 50vh;
-  width: 100vh;
-  height: 100vh;
+  min-height: auto;
+  width: 100%;
+  height: auto;
+  font-size: 12px;
 }
 
 .left-side, .right-side {
-  height: 50vh;
-  padding: 30px;
+  height: auto;
+  padding: 10px;
   text-align: left;
 }
 
@@ -112,7 +113,7 @@ body {
 }
 
 .corner-image {
-  width: 250px;
+  width: 120px;
   transform: scaleY(-1) scaleX(-1);
 }
 }

@@ -7,7 +7,7 @@
 
 body {
  font-family: 'Poppins', sans-serif;
- background-color: #f8f9fa;
+ background-color: #eeeded;
  color: #333;
  height: 100%;
  overflow-x: hidden;
@@ -113,10 +113,11 @@ body {
 
 /* Blog Content */
 .selected-content {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 10;
-  margin-bottom: 30px;
+  gap: 10px;
+  padding-bottom: 20px;
 }
 
 .selected-content .selected {
@@ -135,7 +136,7 @@ body {
 }
 
 .ad-space {
-  display: flex; /* Menggunakan Flexbox */
+  display: absolute; /* Menggunakan Flexbox */
   flex-direction: column; /* Susunan elemen secara vertikal */
   align-items: center; /* Memastikan konten berada di tengah secara horizontal */
   justify-content: flex-start; /* Membuat gambar tetap di atas */
@@ -182,10 +183,22 @@ body {
 /* Previous and Next */
 .navigation {
  display: flex;
+ flex-wrap: nowrap;
  justify-content: center;
- align-items: center;
+ gap: 10px;
  padding: 20px 0;
  position: relative;
+}
+
+.navigation a{
+  flex: 1;
+  min-width: 150px;
+  padding: 10px;
+}
+
+.navigation button {
+  padding: 6px 12px;
+  font-size: 14px;
 }
 
 .previous, .next {
@@ -251,6 +264,7 @@ body {
 
 .separator {
  position: absolute;
+ margin: 10px;
  left: calc(50% - 1.5px);
  transform: translateX(-50%);
  width: 3px;
@@ -284,9 +298,15 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
-  max-width: 500px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
+}
+
+.subscribe-container form{
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
 }
 
 h3 {
@@ -342,8 +362,7 @@ input[type="email"]:focus {
   align-items: center;
 }
 
-.comment-box img {
-  position: absolute;
+.comment-box img, .comment-reply img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -351,22 +370,14 @@ input[type="email"]:focus {
 }
 
 .comment-reply {
-  margin-left: 100px;
+  margin-left: 50px;
   align-items: center;
 }
 
-.comment-reply img {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 .comment-content {
-  margin-left: 130px;
+  margin-left: 15px;
   margin-bottom: 5px;
-  width: 700px;
+  flex: 1;
 }
 
 .comment-content h6 {
@@ -473,28 +484,63 @@ footer a:hover {
 }
 
 .content-area {
-    width: 90%;
-    padding: 10px;
+  width: 90%;
+  padding: 10px;
  }
 }
 
 @media (max-width: 768px) {
+  .selected-content{
+    font-size: 11px;
+  }
+
   .content-area {
-      width: 90%;
-      padding: 15px;
+    width: 90%;
+    padding: 10px;
   }
 
   .ad-space {
-      display: none;
+    position: absolute;
+    display: none;
   }
 
   .ad-between {
-      max-width: 80%;
+    max-width: 80%;
   }
 
-  .navigation {
-      flex-direction: column;
-      text-align: center;
+  .separator {
+    display: none;
+  }
+
+  .subscribe-container form{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .subscribe-btn {
+    width: 100%;
+  }
+
+  .comment-box img,
+  .comment-reply img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .comment-content h6 {
+    font-size: 14px;
+  }
+
+  .comment-content p {
+    font-size: 13px;
+  }
+
+  .reply-link {
+    font-size: 12px;
+  }
+
+  .comment-date {
+    font-size: 12px;
   }
 }
 
@@ -509,6 +555,23 @@ footer a:hover {
       padding: 10px;
   }
 
+  .navigation a {
+    min-width: 120px;
+    padding: 5px;
+  }
+
+  .content-wrapper img {
+    width: 30px; /* icon lebih kecil */
+  }
+
+  .previous span, .next span {
+    font-size: 16px;
+  }
+
+  .previous p, .next p {
+    font-size: 12px;
+  }
+
   .ad-between {
       max-width: 100%;
   }
@@ -518,18 +581,7 @@ footer a:hover {
       padding: 15px;
   }
 
-  .comment-box img {
-      width: 80px;
-      height: 80px;
-  }
-
   .btn-primary {
       width: 100%;
   }
-}
-
-@media (max-width: 353px) {
-html {
-  
-}
 }
