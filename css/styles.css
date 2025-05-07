@@ -184,6 +184,7 @@ a.btn-outline-success:hover {
 
 .content-section {
   margin-top: 375px;
+  align-content: center;
 }
 
 /* Cards */
@@ -387,6 +388,10 @@ footer a:hover {
 .input-group .btn {
   width: auto;
   flex-shrink: 0;
+}
+
+.content-section {
+  text-align: center;
 }
 
 /* Adjust category buttons */
