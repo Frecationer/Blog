@@ -216,6 +216,10 @@ a.btn-outline-success:hover {
   color: #666;
 }
 
+.card-body a {
+  cursor: pointer;
+}
+
 .card-body .img {
   margin-bottom: 15px;
   width: 100%;  
